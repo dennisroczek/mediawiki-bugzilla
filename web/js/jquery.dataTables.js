@@ -965,13 +965,17 @@
 			 *   by javascript
 			 */
 			 //TODO: replace these entries with the i18n keywords
+			var scripts = document.getElementsByTagName("script"),
+			src = scripts[scripts.length-1].src;
+			// todo / FIXME: use the langiage of the user? of the wiki? dunno! nor how to do it
+			var mulitlanguage = JSON.parse(src+'/../../i18n/en.json')
 			this.oLanguage = {
-				"sProcessing": "Processing...",
+				"sProcessing": multilanguage.sProcessing,
 				"sLengthMenu": "Show _MENU_ entries",
 				"sZeroRecords": "No matching records found",
 				"sEmptyTable": "No data available in table",
 				"sLoadingRecords": "Loading...",
-				"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+				"sInfo": multilanguage.sInfo, //"Showing _START_ to _END_ of _TOTAL_ entries",
 				"sInfoEmpty": "Showing 0 to 0 of 0 entries",
 				"sInfoFiltered": "(filtered from _MAX_ total entries)",
 				"sInfoPostFix": "",
@@ -993,7 +997,7 @@
 			 * Notes:    This is an array of objects with the following parameters:
 			 *   int: _iId - internal id for tracking
 			 *   array: _aData - internal data - used for sorting / filtering etc
-			 *   node: nTr - display node
+			 	*   node: nTr - display node
 			 *   array node: _anHidden - hidden TD nodes
 			 *   string: _sRowStripe
 			 */
