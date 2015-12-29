@@ -3,5 +3,8 @@
 	},
 	"bugzilla-desc": "This extension allows read-only integration with Bugzilla via the REST API",
 	"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries"
-
+  "bugzilla-open": "(Open $1%)",
+  "bugzilla-resolved": "(Resolved $1%)",
+  "bugzilla-verified": "(Verified $1%)",
+  "bugzilla-total": "$1"
 }

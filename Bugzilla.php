@@ -40,18 +40,16 @@ $wgResourceModules['ext.Bugzilla'] = array(
  * Classes to be autoloaded by mediawiki. Should you add any cache options, you
  * should include them in this list.
  */
-
-$cwd = dirname(__FILE__); // We don't need to do this more than once!
 $wgMessagesDirs['Bugzilla'] = __DIR__ . '/i18n';
 
-$wgAutoloadClasses['Bugzilla']           = $cwd . '/Bugzilla.class.php';
-$wgAutoloadClasses['BugzillaQuery']      = $cwd . '/BugzillaQuery.class.php';
-$wgAutoloadClasses['BugzillaOutput']     = $cwd . '/BugzillaOutput.class.php';
-$wgAutoloadClasses['BugzillaCacheI']     = $cwd . '/cache/BugzillaCacheI.class.php';
-$wgAutoloadClasses['BugzillaCacheDummy'] = $cwd . '/cache/BugzillaCacheDummy.class.php';
-$wgAutoloadClasses['BugzillaCacheApc']   = $cwd . '/cache/BugzillaCacheApc.class.php';
-$wgAutoloadClasses['BugzillaCacheMemcache'] = $cwd . '/cache/BugzillaCacheMemcache.class.php';
-$wgAutoloadClasses['BugzillaCacheSql']   = $cwd . '/cache/BugzillaCacheSql.class.php';
+$wgAutoloadClasses['Bugzilla']           = __DIR__ . '/Bugzilla.class.php';
+$wgAutoloadClasses['BugzillaQuery']      = __DIR__ . '/BugzillaQuery.class.php';
+$wgAutoloadClasses['BugzillaOutput']     = __DIR__ . '/BugzillaOutput.class.php';
+$wgAutoloadClasses['BugzillaCacheI']     = __DIR__ . '/cache/BugzillaCacheI.class.php';
+$wgAutoloadClasses['BugzillaCacheDummy'] = __DIR__ . '/cache/BugzillaCacheDummy.class.php';
+$wgAutoloadClasses['BugzillaCacheApc']   = __DIR__ . '/cache/BugzillaCacheApc.class.php';
+$wgAutoloadClasses['BugzillaCacheMemcache'] = __DIR__ . '/cache/BugzillaCacheMemcache.class.php';
+$wgAutoloadClasses['BugzillaCacheSql']   = __DIR__ . '/cache/BugzillaCacheSql.class.php';
 
 /**
  * These hooks are used by mediawiki to properly display the plugin information
@@ -188,8 +186,8 @@ $wgBugzillaCacheMins = 5; // Minutes to cache results (default: 5)
 $wgBugzillaJqueryTable = true; // Use a jQuery table for display (default: true)
 
 // Charts
-$wgBugzillaChartStorage = realpath($cwd . '/charts'); // Location to store generated bug charts
-$wgBugzillaFontStorage = $cwd . '/pchart/fonts'; // Path to font directory for font data
+$wgBugzillaChartStorage = realpath(__DIR__ . '/charts'); // Location to store generated bug charts
+$wgBugzillaFontStorage = __DIR__ . '/pchart/fonts'; // Path to font directory for font data
 $wgBugzillaChartUrl = $wgScriptPath . '/extensions/Bugzilla/charts'; // The URL to use to display charts
 
 // The default fields to display
