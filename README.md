@@ -11,6 +11,7 @@ Requirements
 
 * Requires <a href="http://pear.php.net/package/HTTP_Request2">HTTP_Request2 from PEAR</a>
 * For charting, requires <a href="http://libgd.bitbucket.org/">gd</a>
+* MediaWiki 1.23
 
 Installation
 ================================
