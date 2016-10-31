@@ -94,6 +94,17 @@ with the stats summary hidden:
         }
     </bugzilla>
 
+
+You may also limit the total number of results displayed and/or randomize the order of the results:
+
+    <bugzilla randomize>
+        {
+            "whiteboard": "EasyHack",
+            "status": "NEW",
+            "limit": "13"
+        }
+    </bugzilla>
+
 Some commonly used query parameters are:
 
 * id
