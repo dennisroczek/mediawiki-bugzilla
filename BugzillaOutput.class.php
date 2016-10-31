@@ -83,6 +83,10 @@ class BugzillaBugListing extends BugzillaOutput {
         // Set the bug data for the templates
         if(isset($this->query->data['bugs']) && count($this->query->data['bugs']) > 0) {
             $this->response->bugs = $this->query->data['bugs'];
+            // Randomize the bugs, if requested.
+            if(isset($this->config['randomize'])) {
+                shuffle($bugs);
+            }
         }
 
         // Set the field data for the templates
